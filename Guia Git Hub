@@ -18,6 +18,7 @@ git config --global user.email "your_email@example.com"
 4. Personalización
 git config --global color.ui true
 git config --global core.editor "code --wait"
+
 5. Configurar SSH
 5.1. Configurar claves públicas
 ssh-keygen -t rsa -C "your_email@example.com"
@@ -30,7 +31,9 @@ clip < ~/.ssh/id_rsa.pub
 git config --global init.defaultBranch main
 
 Bash - Comandos básicos
+
 Navegación entre Directorios:
+
 pwd: Muestra la ruta del directorio actual.
 ls: Lista el contenido del directorio actual.
 ls -l: Lista el contenido en formato largo.
@@ -38,7 +41,9 @@ ls -a: Lista todos los archivos, incluyendo los ocultos.
 cd nombre_directorio: Cambia al directorio especificado.
 cd ..: Sube un nivel de directorio.
 cd: Cambia al directorio personal del usuario.
+
 Manipulación de Archivos y Directorios:
+
 touch nombre_archivo: Crea un nuevo archivo vacío o actualiza la marca de tiempo de un archivo existente.
 mkdir nombre_directorio: Crea un nuevo directorio.
 cp origen destino: Copia archivos o directorios.
@@ -50,6 +55,7 @@ more nombre_archivo o less nombre_archivo: Visualiza el contenido de un archivo 
 code nombre_archivo: Edita un archivo usando el editor de texto VSCode.
 echo "texto" > nombre_archivo: Escribe texto en un archivo (sobrescribe el contenido existente).
 echo "texto" >> nombre_archivo: Añade texto al final de un archivo.
+
 Git - comandos básicos
 git --version Nos indica la versión en la que nos encontramos.
 git clone "URL" Acepta una URL SSH o HTTPS para clonar un repositorio.
@@ -61,6 +67,7 @@ git commit -m "Añadir hello_world.txt" Hace un commit (guarda) todos los archiv
 git push origin main o git push origin masterenvía nuestros cambios; sincroniza nuestro git con el repositorio en GitHub. Origin es el nombre de nuestra conexión remota. Por defecto y como costumbre, su nombre es origin pero se puede cambiar. Se podría ejecutar solo git pushya que no trabajamos con otra rama.
 git log Ver el historial de cambios realizados.
 git init Crea un nuevo repositorio git en el directorio actual.
+
 Git - Crear un repositorio localmente
 Elegimos una carpeta, que puede estar vacía o no.
 
@@ -69,10 +76,10 @@ Git - Volver a un commit anterior:
 git logpara ver el historial de commits
 git checkout códigopara volver a una versión anterior.
 Si ejecutamos git log Veremos que sigue trayendo HEAD, pero no master o main.
-git branchnos muestra las ramas actuales.
+git branch nos muestra las ramas actuales.
 git switch master para volver atrás, al commit más reciente.
 git switch -c "rama2" si queremos crear una rama desde el commit en que nos encontramos, tras haber hecho un git checkout.
-git logde nuevo para ver que nuestra HEADestá en rama2.
+git logde nuevo para ver que nuestra HEAD está en rama2.
 si tecleamos git branchveremos que estamos en la rama2.
 Podemos ver los cambios que aparecen en el archivo modificado cada vez que pedimos a Git cambiar de master a rama y viceversa.
 
